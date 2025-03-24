@@ -17,11 +17,11 @@ var user = [
     },
 ];
 
-var re = /([\w]+)(\.[\w]+)*@(gmail\.com|yahoo\.com)/;
+var re = /^([\w]+)(\.[\w]+)*@(gmail\.com|yahoo\.com)$/;
 var validatedEmails = user.filter(checkerOfEMail);
 
 console.log(validatedEmails);
-console.log(user);
+//console.log(user);
 
 function checkerOfEMail(arr) {
     return re.test(arr.email);
@@ -31,7 +31,7 @@ function checkerOfEMail(arr) {
 
  var allWords = ["Wonderful", "Happiness", "Time", "Task", "Apple", "Joyful", "Anastasia", "QA", "QW", "Testing"];
  
- var regExp = /[^aA]{6,}/;
+ var regExp = /^[^aA]{6,}$/;
 
  var filteredWords = allWords.filter(checkerOfWords);
 
